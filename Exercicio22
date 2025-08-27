@@ -1,0 +1,126 @@
+class CargaContainer {
+ String _identificador;
+ double _pesoToneladas;
+ String _descricao;
+
+
+   CargaContainer (this._identificador, this._pesoToneladas, this._descricao) {
+  if (_pesoToneladas < 0) {
+   print('Peso não pode ser negativo. Definindo peso comk 0.0');
+_pesoToneladas = 0.0;
+  }
+}
+
+ CargaContainer.registroParcial({required String Identificador, required String: _identificador = identificador, _descricao = descricao, _pesoToneladas = 0.0;
+
+
+String get identificador => _identificador;
+double get pesoToneladas => _pesoToneladas;
+String get descricao => _descricao;
+
+set pesoToneladas(double peso) {
+ if (peso >= 0) {
+_pesoToneladas = peso;
+ } else {
+print('Erro: Peso inválido, não atualizado.');
+    }
+  }
+
+  // Método exibirDados
+  void exibirDados() {
+    print('Tipo de Carga: Container');
+    print('ID: $_identificador');
+    print('Peso: $_pesoToneladas toneladas');
+    print('Descrição: $_descricao');
+  }
+}
+
+class CargaGranelSolido {
+  String _identificador;
+  double _pesoToneladas;
+  String _descricao;
+
+  CargaGranelSolido(this._identificador, this._pesoToneladas, this._descricao) {
+    if (_pesoToneladas < 0) {
+      print('Peso não pode ser negativo. Definindo peso como 0.0');
+      _pesoToneladas = 0.0;
+    }
+  }
+
+  CargaGranelSolido.registroParcial({required String identificador, required String descricao})
+      : _identificador = identificador,
+        _descricao = descricao,
+        _pesoToneladas = 0.0;
+
+  String get identificador => _identificador;
+  double get pesoToneladas => _pesoToneladas;
+  String get descricao => _descricao;
+
+  set pesoToneladas(double peso) {
+    if (peso >= 0) {
+      _pesoToneladas = peso;
+    } else {
+      print('Erro: Peso não pode ser negativo.');
+    }
+  }
+
+  void registrarPeso(double peso) {
+    if (peso >= 0) {
+      _pesoToneladas = peso;
+    } else {
+      print('Erro: Peso inválido, não atualizado.');
+    }
+  }
+
+  void exibirDados() {
+    print('Tipo de Carga: Granel Sólido');
+    print('ID: $_identificador');
+    print('Peso: $_pesoToneladas toneladas');
+    print('Descrição: $_descricao');
+  }
+}
+
+class CargaGranelLiquido {
+  String _identificador;
+  double _pesoToneladas;
+  String _descricao;
+
+  CargaGranelLiquido(this._identificador, this._pesoToneladas, this._descricao) {
+    if (_pesoToneladas < 0) {
+      print('Peso não pode ser negativo. Definindo peso como 0.0');
+      _pesoToneladas = 0.0;
+    }
+  }
+
+  CargaGranelLiquido.registroParcial({required String identificador, required String descricao})
+      : _identificador = identificador,
+        _descricao = descricao,
+        _pesoToneladas = 0.0;
+
+  String get identificador => _identificador;
+  double get pesoToneladas => _pesoToneladas;
+  String get descricao => _descricao;
+
+  set pesoToneladas(double peso) {
+    if (peso >= 0) {
+      _pesoToneladas = peso;
+    } else {
+      print('Erro: Peso não pode ser negativo.');
+    }
+  }
+
+  void registrarPeso(double peso) {
+    if (peso >= 0) {
+      _pesoToneladas = peso;
+    } else {
+      print('Erro: Peso inválido, não atualizado.');
+    }
+  }
+
+  void exibirDados() {
+    print('Tipo de Carga: Granel Líquido');
+    print('ID: $_identificador');
+    print('Peso: $_pesoToneladas toneladas');
+    print('Descrição: $_descricao');
+  }
+}
