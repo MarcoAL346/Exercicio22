@@ -26,7 +26,7 @@ print('Erro: Peso inválido, não atualizado.');
     }
   }
 
-  // Método exibirDados
+ 
   void exibirDados() {
     print('Tipo de Carga: Container');
     print('ID: $_identificador');
